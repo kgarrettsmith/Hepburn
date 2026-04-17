@@ -708,7 +708,7 @@ function fmtDate(d)  { return `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFu
 
 function totalSessions() { return SQ_SESSIONS.length + DL_SESSIONS.length; }
 function completedSessions() {
-  const now = new Date('4/12/2027'); now.setHours(0,0,0,0);
+  const now = new Date(); now.setHours(0,0,0,0);
   return [...SQ_SESSIONS, ...DL_SESSIONS].filter(s => new Date(s[0]) < now).length;
 }
 
